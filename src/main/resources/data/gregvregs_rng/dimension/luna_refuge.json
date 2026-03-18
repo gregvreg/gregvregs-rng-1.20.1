@@ -1,0 +1,11 @@
+{
+  "type": "gregvregs_rng:luna_refuge",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "gregvregs_rng:luna_flat",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "gregvregs_rng:luna_biome"
+    }
+  }
+}

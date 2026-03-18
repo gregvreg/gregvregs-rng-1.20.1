@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "gregvregs_rng",
+	"version": "1.0.0",
+	"name": "Gregvregs RNG",
+	"description": "A RNG mining mod inspired by Rex Reincarnated.",
+	"authors": ["toi"],
+	"environment": "*",
+	"entrypoints": {
+		"main": ["name.modid.GregvregsRng"],
+		"client": ["name.modid.GregvregsRngClient"]
+	},
+	"mixins": ["gregvregs-rng.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"fabric-api": "*",
+		"minecraft": "~1.20.1",
+		"java": ">=17"
+	}
+}

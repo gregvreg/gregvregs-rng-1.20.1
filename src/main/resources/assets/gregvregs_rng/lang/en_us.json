@@ -1,0 +1,8 @@
+{
+  "block.gregvregs_rng.text_block": "Text Block",
+  "block.gregvregs_rng.common_ore": "Common Stone",
+  "block.gregvregs_rng.rare_ore": "Rare Crystal",
+  "item.gregvregs_rng.text_item": "Text Item",
+  "item.gregvregs_rng.teleport_item": "Lunar Teleporter",
+  "key.gregvregs_rng.toggle_hud": "Toggle RNG HUD"
+}
