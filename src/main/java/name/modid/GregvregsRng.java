@@ -14,6 +14,7 @@ public class GregvregsRng implements ModInitializer {
 		ModItems.registerItems();
 		RngMiningListener.register();
 		LunaSpawnGenerator.register();
+		ModPickaxes.registerPickaxes();
 		LOGGER.info("GregvregsRng mod loaded !");
 	}
 }
