@@ -1,8 +1,11 @@
 {
-  "block.gregvregs_rng.text_block": "Text Block",
+  "block.gregvregs_rng.moon_stone": "Moon Stone",
   "block.gregvregs_rng.common_ore": "Common Stone",
   "block.gregvregs_rng.rare_ore": "Rare Crystal",
   "item.gregvregs_rng.text_item": "Text Item",
   "item.gregvregs_rng.teleport_item": "Lunar Teleporter",
+  "item.gregvregs_rng.default_pickaxe": "Default Pickaxe",
+  "item.gregvregs_rng.nostalgic_axe": "Nostalgic Axe",
+  "item.gregvregs_rng.nilaxe": "Nilaxe",
   "key.gregvregs_rng.toggle_hud": "Toggle RNG HUD"
 }
