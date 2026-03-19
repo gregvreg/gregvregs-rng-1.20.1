@@ -18,7 +18,7 @@ public class ModPickaxes {
         @Override public int getMiningLevel() { return 3; }
         @Override public int getEnchantability() { return 15; }
         @Override public Ingredient getRepairIngredient() {
-            return Ingredient.ofItems(ModBlocks.COMMON_ORE.asItem());
+            return Ingredient.ofItems(ModBlocks.GARNET.asItem());
         }
     };
 
