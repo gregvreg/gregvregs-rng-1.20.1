@@ -10,10 +10,10 @@ public class HudOverlay {
 
     public static boolean visible = true;
 
-    private static final int COLOR_RARE   = 0xFFAA00FF;
-    private static final int COLOR_COMMON = 0xFFAAAAAA;
-    private static final int COLOR_TITLE  = 0xFFFFFFFF;
-    private static final int COLOR_BG     = 0xAA000000;
+    private static final int COLOR_ULTRANIUM = 0xFFAA00FF;
+    private static final int COLOR_GARNET    = 0xFFCC4444;
+    private static final int COLOR_TITLE     = 0xFFFFFFFF;
+    private static final int COLOR_BG        = 0xAA000000;
 
     public static void register() {
         HudRenderCallback.EVENT.register((drawContext, tickDelta) -> {
@@ -25,7 +25,6 @@ public class HudOverlay {
             if (!client.player.getWorld().getRegistryKey()
                     .equals(ItemTeleport.LUNA_REFUGE_KEY)) return;
 
-            // Ne rien afficher si aucun bloc miné
             long nonZero = ModStats.COUNTS.values().stream().filter(v -> v > 0).count();
             if (nonZero == 0) return;
 
@@ -51,20 +50,19 @@ public class HudOverlay {
                 String id = entry.getKey();
                 int count = entry.getValue();
 
-                if (count == 0) continue;   
+                if (count == 0) continue;
 
                 int color;
                 String label;
 
                 switch (id) {
-                    case "rare_ore"   -> { color = COLOR_RARE;   label = "Rare Crystal"; }
-                    case "common_ore" -> { color = COLOR_COMMON; label = "Common Stone"; }
-                    case "moon_stone" -> { color = 0xFFCCCCCC;   label = "Moon Stone";   }
-                    default           -> { color = COLOR_TITLE;  label = id; }
+                    case "ultranium"  -> { color = COLOR_ULTRANIUM; label = "Ultranium";  }
+                    case "garnet"     -> { color = COLOR_GARNET;    label = "Garnet";     }
+                    case "moon_stone" -> { color = 0xFFCCCCCC;      label = "Moon Stone"; }
+                    default           -> { color = COLOR_TITLE;     label = id;           }
                 }
 
-                drawContext.drawTextWithShadow(client.textRenderer,
-                        label, x, y, color);
+                drawContext.drawTextWithShadow(client.textRenderer, label, x, y, color);
 
                 String countStr = String.valueOf(count);
                 int textW = client.textRenderer.getWidth(countStr);

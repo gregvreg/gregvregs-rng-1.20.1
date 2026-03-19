@@ -15,11 +15,11 @@ public class ModBlocks {
             FabricBlockSettings.copyOf(Blocks.STONE).strength(2.0f, 6.0f)
     );
 
-    public static final Block COMMON_ORE = new Block(
+    public static final Block GARNET = new Block(
             FabricBlockSettings.copyOf(Blocks.STONE).strength(1.5f, 4.0f)
     );
 
-    public static final Block RARE_ORE = new Block(
+    public static final Block ULTRANIUM = new Block(
             FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).strength(3.0f, 8.0f)
     );
 
@@ -31,15 +31,15 @@ public class ModBlocks {
                 new BlockItem(MOON_STONE, new Item.Settings()));
 
         Registry.register(Registries.BLOCK,
-                new Identifier("gregvregs_rng", "common_ore"), COMMON_ORE);
+                new Identifier("gregvregs_rng", "garnet"), GARNET);
         Registry.register(Registries.ITEM,
-                new Identifier("gregvregs_rng", "common_ore"),
-                new BlockItem(COMMON_ORE, new Item.Settings()));
+                new Identifier("gregvregs_rng", "garnet"),
+                new BlockItem(GARNET, new Item.Settings()));
 
         Registry.register(Registries.BLOCK,
-                new Identifier("gregvregs_rng", "rare_ore"), RARE_ORE);
+                new Identifier("gregvregs_rng", "ultranium"), ULTRANIUM);
         Registry.register(Registries.ITEM,
-                new Identifier("gregvregs_rng", "rare_ore"),
-                new BlockItem(RARE_ORE, new Item.Settings()));
+                new Identifier("gregvregs_rng", "ultranium"),
+                new BlockItem(ULTRANIUM, new Item.Settings()));
     }
 }

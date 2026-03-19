@@ -8,8 +8,8 @@ public class ModStats {
     public static final Map<String, Integer> COUNTS = new LinkedHashMap<>();
 
     static {
-        COUNTS.put("rare_ore", 0);
-        COUNTS.put("common_ore", 0);
+        COUNTS.put("ultranium", 0);
+        COUNTS.put("garnet", 0);
         COUNTS.put("moon_stone", 0);
     }
 

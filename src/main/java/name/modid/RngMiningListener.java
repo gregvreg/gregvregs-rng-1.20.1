@@ -31,16 +31,15 @@ public class RngMiningListener {
             ServerWorld serverWorld = (ServerWorld) world;
             ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
 
-            // Vérifier que le joueur tient une pioche du mod
             ItemStack tool = serverPlayer.getMainHandStack();
             if (!(tool.getItem() instanceof LunaPickaxe)) return;
 
             if (state.isOf(ModBlocks.MOON_STONE)) {
                 ModStats.increment("moon_stone");
-            } else if (state.isOf(ModBlocks.COMMON_ORE)) {
-                ModStats.increment("common_ore");
-            } else if (state.isOf(ModBlocks.RARE_ORE)) {
-                ModStats.increment("rare_ore");
+            } else if (state.isOf(ModBlocks.GARNET)) {
+                ModStats.increment("garnet");
+            } else if (state.isOf(ModBlocks.ULTRANIUM)) {
+                ModStats.increment("ultranium");
             } else {
                 return;
             }
@@ -72,11 +71,10 @@ public class RngMiningListener {
     }
 
     private static Block rollRng(ServerPlayerEntity player, float luckMultiplier) {
-        // Rare : 1/50 boosté par luck
         float rareChance = luckMultiplier / 50.0f;
         if (RANDOM.nextFloat() < rareChance) {
             player.sendMessage(
-                    Text.literal("§d✦ §5RARE §d✦ §fTu as trouvé un §5Rare Crystal§f !"),
+                    Text.literal("§d✦ §5ULTRANIUM §d✦ §fTu as trouvé de l'§5Ultranium§f !"),
                     false
             );
             player.getWorld().playSound(
@@ -86,13 +84,12 @@ public class RngMiningListener {
                     SoundCategory.PLAYERS,
                     1.0f, 0.5f
             );
-            return ModBlocks.RARE_ORE;
+            return ModBlocks.ULTRANIUM;
         }
 
-        // Common : 1/3 boosté par luck
         float commonChance = luckMultiplier / 3.0f;
         if (RANDOM.nextFloat() < commonChance) {
-            return ModBlocks.COMMON_ORE;
+            return ModBlocks.GARNET;
         }
 
         return ModBlocks.MOON_STONE;
